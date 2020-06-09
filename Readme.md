@@ -1,7 +1,7 @@
 # Личный проект «Шесть городов» [![Build status][travis-image]][travis-url]
 
 * Студент: [Роман Герцвольф](https://up.htmlacademy.ru/react/4/user/1088545).
-* Наставник: `Неизвестно`.
+* Наставник: [Влад Слепкан](https://htmlacademy.ru/profile/id383197).
 
 ---
 
