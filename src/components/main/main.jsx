@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Main = (props) => {
-  // eslint-disable-next-line react/prop-types
-  const {placesCount} = props;
+
+  const {placesCount, places} = props;
 
   return <div className="page page--gray page--main">
     <header className="header">
@@ -123,7 +124,7 @@ const Main = (props) => {
                     </div>
                   </div>
                   <h2 className="place-card__name">
-                    <a href="#">Beautiful &amp; luxurious apartment at great location</a>
+                    <a href="#">{places[0]}</a>
                   </h2>
                   <p className="place-card__type">Apartment</p>
                 </div>
@@ -155,7 +156,7 @@ const Main = (props) => {
                     </div>
                   </div>
                   <h2 className="place-card__name">
-                    <a href="#">Wood and stone place</a>
+                    <a href="#">{places[1]}</a>
                   </h2>
                   <p className="place-card__type">Private room</p>
                 </div>
@@ -187,7 +188,7 @@ const Main = (props) => {
                     </div>
                   </div>
                   <h2 className="place-card__name">
-                    <a href="#">Canal View Prinsengracht</a>
+                    <a href="#">{places[2]}</a>
                   </h2>
                   <p className="place-card__type">Apartment</p>
                 </div>
@@ -222,7 +223,7 @@ const Main = (props) => {
                     </div>
                   </div>
                   <h2 className="place-card__name">
-                    <a href="#">Nice, cozy, warm big bed apartment</a>
+                    <a href="#">{places[3]}</a>
                   </h2>
                   <p className="place-card__type">Apartment</p>
                 </div>
@@ -254,7 +255,7 @@ const Main = (props) => {
                     </div>
                   </div>
                   <h2 className="place-card__name">
-                    <a href="#">Wood and stone place</a>
+                    <a href="#">{places[4]}</a>
                   </h2>
                   <p className="place-card__type">Private room</p>
                 </div>
@@ -268,6 +269,13 @@ const Main = (props) => {
       </div >
     </main >
   </div >;
+};
+
+Main.propTypes = {
+  placesCount: PropTypes.number,
+  places: PropTypes.arrayOf(
+      PropTypes.string
+  ),
 };
 
 export default Main;
