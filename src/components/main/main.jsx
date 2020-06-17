@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Main = (props) => {
 
-  const {placesCount, places} = props;
+  const {placesCount, places, onTitleClick} = props;
 
   return <div className="page page--gray page--main">
     <header className="header">
@@ -124,7 +124,7 @@ const Main = (props) => {
                     </div>
                   </div>
                   <h2 className="place-card__name">
-                    <a href="#">{places[0]}</a>
+                    <a onClick={onTitleClick} href="#">{places[0]}</a>
                   </h2>
                   <p className="place-card__type">Apartment</p>
                 </div>
@@ -156,7 +156,7 @@ const Main = (props) => {
                     </div>
                   </div>
                   <h2 className="place-card__name">
-                    <a href="#">{places[1]}</a>
+                    <a onClick={onTitleClick} href="#">{places[1]}</a>
                   </h2>
                   <p className="place-card__type">Private room</p>
                 </div>
@@ -188,7 +188,7 @@ const Main = (props) => {
                     </div>
                   </div>
                   <h2 className="place-card__name">
-                    <a href="#">{places[2]}</a>
+                    <a onClick={onTitleClick} href="#">{places[2]}</a>
                   </h2>
                   <p className="place-card__type">Apartment</p>
                 </div>
@@ -223,7 +223,7 @@ const Main = (props) => {
                     </div>
                   </div>
                   <h2 className="place-card__name">
-                    <a href="#">{places[3]}</a>
+                    <a onClick={onTitleClick} href="#">{places[3]}</a>
                   </h2>
                   <p className="place-card__type">Apartment</p>
                 </div>
@@ -255,7 +255,7 @@ const Main = (props) => {
                     </div>
                   </div>
                   <h2 className="place-card__name">
-                    <a href="#">{places[4]}</a>
+                    <a onClick={onTitleClick} href="#">{places[4]}</a>
                   </h2>
                   <p className="place-card__type">Private room</p>
                 </div>
@@ -272,10 +272,11 @@ const Main = (props) => {
 };
 
 Main.propTypes = {
-  placesCount: PropTypes.number,
+  placesCount: PropTypes.number.isRequired,
   places: PropTypes.arrayOf(
       PropTypes.string
-  ),
+  ).isRequired,
+  onTitleClick: PropTypes.func.isRequired
 };
 
 export default Main;
