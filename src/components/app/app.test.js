@@ -50,6 +50,7 @@ it(`Render App`, () => {
       <App
         placesCount={50}
         places = {places}
+        onTitleClick = {()=>{}}
       />
   ).toJSON();
 
