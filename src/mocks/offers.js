@@ -1,8 +1,4 @@
-import React from "react";
-import renderer from "react-test-renderer";
-import Main from "./main";
-
-const places = [
+export default [
   {
     city: `Amsterdam`,
     type: `Apartment`,
@@ -44,15 +40,3 @@ const places = [
     isFeatured: false,
   },
 ];
-
-it(`Render Main`, () => {
-  const tree = renderer.create(
-      <Main
-        placesCount={50}
-        places={places}
-        onTitleClick={() => {}}
-      />
-  ).toJSON();
-
-  expect(tree).toMatchSnapshot();
-});
