@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render offer details 1`] = `
+<offerDetails
+  place={
+    Object {
+      "badrooms": 3,
+      "city": "Amsterdam",
+      "description": Array [
+        "A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.",
+        "An independent House, strategically located between Rembrand Square and National Opera, but where the bustle of the city comes to rest in this alley flowery and colorful.",
+      ],
+      "host": Object {
+        "image": "img/avatar-angelina.jpg",
+        "isSuper": true,
+        "name": "Angelina",
+      },
+      "id": 1,
+      "includes": Array [
+        "Wifi",
+        "Heating",
+        "Kitchen",
+        "Cable TV",
+      ],
+      "isFeatured": false,
+      "isPremium": true,
+      "maxGuests": 4,
+      "pictures": Object {
+        "featured": "img/apartment-02.jpg",
+        "gallery": Array [
+          "img/apartment-03.jpg",
+          "img/room.jpg",
+          "img/apartment-01.jpg",
+          "img/apartment-02.jpg",
+          "img/apartment-01.jpg",
+          "img/apartment-02.jpg",
+        ],
+      },
+      "price": 120,
+      "rate": 4.5,
+      "title": "Beautiful & luxurious apartment at great location",
+      "type": "hotel",
+    }
+  }
+/>
+`;
