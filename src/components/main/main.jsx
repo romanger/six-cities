@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, {arrayOf} from 'prop-types';
 import OffersList from '../offers-list/offers-list.jsx';
 
 const Main = (props) => {
@@ -111,14 +111,27 @@ const Main = (props) => {
 Main.propTypes = {
   placesCount: PropTypes.number.isRequired,
   places: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number,
     city: PropTypes.string,
     type: PropTypes.string,
-    picture: PropTypes.string,
+    pictures: PropTypes.shape({
+      featured: PropTypes.string,
+      gallery: arrayOf(PropTypes.string),
+    }),
     title: PropTypes.string,
+    description: PropTypes.arrayOf(PropTypes.string),
     price: PropTypes.number,
     rate: PropTypes.number,
     isPremium: PropTypes.bool,
     isFeatured: PropTypes.bool,
+    badrooms: PropTypes.number,
+    maxGuests: PropTypes.number,
+    includes: PropTypes.arrayOf(PropTypes.string),
+    host: PropTypes.shape({
+      image: PropTypes.string,
+      name: PropTypes.string,
+      isSuper: PropTypes.bool,
+    }),
   })),
   onTitleClick: PropTypes.func.isRequired,
 };

@@ -1,6 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import OfferCard from "./offer-card.jsx";
+import offerDetails from "./offer-details.jsx";
 
 const place = {
   id: 1,
@@ -33,17 +33,11 @@ const place = {
   }
 };
 
-it(`Render offer card`, () => {
+it(`Render offer details`, () => {
   const tree = renderer.create(
-      (<OfferCard
+      <offerDetails
         place={place}
-        onTitleClick={() => { }}
-        onCardHover={() => { }}
-      />), {
-        createNodeMock: () => {
-          return {};
-        }
-      }
+      />
   ).toJSON();
 
   expect(tree).toMatchSnapshot();

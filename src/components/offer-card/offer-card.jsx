@@ -1,9 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, {arrayOf} from 'prop-types';
+import {PropertyType} from '../../const.js';
+import {roundRate} from '../../utils.js';
 
 const OfferCard = (props) => {
   const {place, onTitleClick, onCardHover} = props;
-  const rate = place.rate * 100 / 5;
 
   return <article onMouseOver={() => onCardHover(place)} className="cities__place-card place-card">
     {place.isPremium &&
@@ -13,7 +14,7 @@ const OfferCard = (props) => {
 
     <div className="cities__image-wrapper place-card__image-wrapper">
       <a href="#">
-        <img className="place-card__image" src={place.picture} width="260" height="200" alt="Place image" />
+        <img className="place-card__image" src={place.pictures.featured} width="260" height="200" alt="Place image" />
       </a>
     </div>
     <div className="place-card__info">
@@ -31,28 +32,45 @@ const OfferCard = (props) => {
       </div>
       <div className="place-card__rating rating">
         <div className="place-card__stars rating__stars">
-          <span style={{width: rate + `%`}}></span>
+          <span style={{width: roundRate(place.rate) + `%`}}></span>
           <span className="visually-hidden">Rating</span>
         </div>
       </div>
       <h2 className="place-card__name">
-        <a onClick={onTitleClick} href="#">{place.title}</a>
+        <a onClick={(e) => {
+          e.preventDefault();
+          onTitleClick(place);
+        }}
+        href="#">{place.title}</a>
       </h2>
-      <p className="place-card__type">{place.type}</p>
+      <p className="place-card__type">{PropertyType[place.type]}</p>
     </div>
   </article>;
 };
 
 OfferCard.propTypes = {
   place: PropTypes.shape({
+    id: PropTypes.number,
     city: PropTypes.string,
     type: PropTypes.string,
-    picture: PropTypes.string,
+    pictures: PropTypes.shape({
+      featured: PropTypes.string,
+      gallery: arrayOf(PropTypes.string),
+    }),
     title: PropTypes.string,
+    description: PropTypes.arrayOf(PropTypes.string),
     price: PropTypes.number,
     rate: PropTypes.number,
     isPremium: PropTypes.bool,
     isFeatured: PropTypes.bool,
+    badrooms: PropTypes.number,
+    maxGuests: PropTypes.number,
+    includes: PropTypes.arrayOf(PropTypes.string),
+    host: PropTypes.shape({
+      image: PropTypes.string,
+      name: PropTypes.string,
+      isSuper: PropTypes.bool,
+    }),
   }),
   onTitleClick: PropTypes.func.isRequired,
   onCardHover: PropTypes.func.isRequired,
