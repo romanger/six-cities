@@ -71,6 +71,7 @@ OfferCard.propTypes = {
       name: PropTypes.string,
       isSuper: PropTypes.bool,
     }),
+    coordinates: PropTypes.arrayOf(PropTypes.number),
   }),
   onTitleClick: PropTypes.func.isRequired,
   onCardHover: PropTypes.func.isRequired,

@@ -55,6 +55,7 @@ OffersList.propTypes = {
       name: PropTypes.string,
       isSuper: PropTypes.bool,
     }),
+    coordinates: PropTypes.arrayOf(PropTypes.number),
   })).isRequired,
   onTitleClick: PropTypes.func.isRequired
 };

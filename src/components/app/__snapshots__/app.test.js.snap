@@ -155,6 +155,11 @@ exports[`Render App 1`] = `
       >
         <section
           className="cities__places places"
+          style={
+            Object {
+              "flexShrink": 0,
+            }
+          }
         >
           <h2
             className="visually-hidden"
@@ -600,13 +605,9 @@ exports[`Render App 1`] = `
             </article>
           </div>
         </section>
-        <div
-          className="cities__right-section"
-        >
-          <section
-            className="cities__map map"
-          />
-        </div>
+        <section
+          className="cities__map map"
+        />
       </div>
     </div>
   </main>

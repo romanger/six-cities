@@ -6,6 +6,10 @@ exports[`Render offer details 1`] = `
     Object {
       "badrooms": 3,
       "city": "Amsterdam",
+      "coordinates": Array [
+        52.3909553943508,
+        4.85309666406198,
+      ],
       "description": Array [
         "A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.",
         "An independent House, strategically located between Rembrand Square and National Opera, but where the bustle of the city comes to rest in this alley flowery and colorful.",

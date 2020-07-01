@@ -310,6 +310,7 @@ OfferDetails.propTypes = {
       name: PropTypes.string,
       isSuper: PropTypes.bool,
     }),
+    coordinates: PropTypes.arrayOf(PropTypes.number),
   })
 };
 
