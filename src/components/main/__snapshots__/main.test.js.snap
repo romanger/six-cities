@@ -155,6 +155,11 @@ exports[`Render Main 1`] = `
       >
         <section
           className="cities__places places"
+          style={
+            Object {
+              "flexShrink": 0,
+            }
+          }
         >
           <h2
             className="visually-hidden"
@@ -600,13 +605,178 @@ exports[`Render Main 1`] = `
             </article>
           </div>
         </section>
-        <div
-          className="cities__right-section"
-        >
-          <section
-            className="cities__map map"
-          />
-        </div>
+        <Map
+          city={
+            Array [
+              52.38333,
+              4.9,
+            ]
+          }
+          places={
+            Array [
+              Object {
+                "badrooms": 3,
+                "city": "Amsterdam",
+                "coordinates": Array [
+                  52.3909553943508,
+                  4.85309666406198,
+                ],
+                "description": Array [
+                  "A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.",
+                  "An independent House, strategically located between Rembrand Square and National Opera, but where the bustle of the city comes to rest in this alley flowery and colorful.",
+                ],
+                "host": Object {
+                  "image": "img/avatar-angelina.jpg",
+                  "isSuper": true,
+                  "name": "Angelina",
+                },
+                "id": 1,
+                "includes": Array [
+                  "Wifi",
+                  "Heating",
+                  "Kitchen",
+                  "Cable TV",
+                ],
+                "isFeatured": false,
+                "isPremium": true,
+                "maxGuests": 4,
+                "pictures": Object {
+                  "featured": "img/apartment-02.jpg",
+                  "gallery": Array [
+                    "img/apartment-03.jpg",
+                    "img/room.jpg",
+                    "img/apartment-01.jpg",
+                    "img/apartment-02.jpg",
+                    "img/apartment-01.jpg",
+                    "img/apartment-02.jpg",
+                  ],
+                },
+                "price": 120,
+                "rate": 4.5,
+                "title": "Beautiful & luxurious apartment at great location",
+                "type": "hotel",
+              },
+              Object {
+                "badrooms": 1,
+                "city": "Amsterdam",
+                "coordinates": Array [
+                  52.3909553943508,
+                  4.85309666406198,
+                ],
+                "description": Array [
+                  "A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.",
+                  "An independent House, strategically located between Rembrand Square and National Opera, but where the bustle of the city comes to rest in this alley flowery and colorful.",
+                ],
+                "host": Object {
+                  "image": "img/avatar-angelina.jpg",
+                  "isSuper": false,
+                  "name": "Greta",
+                },
+                "id": 2,
+                "includes": Array [
+                  "Wifi",
+                  "Heating",
+                ],
+                "isFeatured": true,
+                "isPremium": false,
+                "maxGuests": 2,
+                "pictures": Object {
+                  "featured": "img/apartment-01.jpg",
+                  "gallery": Array [
+                    "img/apartment-03.jpg",
+                    "img/room.jpg",
+                    "img/apartment-01.jpg",
+                    "img/apartment-02.jpg",
+                    "img/apartment-01.jpg",
+                  ],
+                },
+                "price": 80,
+                "rate": 4.3,
+                "title": "Wood and stone place",
+                "type": "room",
+              },
+              Object {
+                "badrooms": 2,
+                "city": "Amsterdam",
+                "coordinates": Array [
+                  52.3909553943508,
+                  4.85309666406198,
+                ],
+                "description": Array [
+                  "A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.",
+                  "An independent House, strategically located between Rembrand Square and National Opera, but where the bustle of the city comes to rest in this alley flowery and colorful.",
+                ],
+                "host": Object {
+                  "image": "img/avatar-angelina.jpg",
+                  "isSuper": true,
+                  "name": "Sam",
+                },
+                "id": 3,
+                "includes": Array [
+                  "Kitchen",
+                  "Cable TV",
+                ],
+                "isFeatured": false,
+                "isPremium": false,
+                "maxGuests": 1,
+                "pictures": Object {
+                  "featured": "img/apartment-03.jpg",
+                  "gallery": Array [
+                    "img/apartment-03.jpg",
+                    "img/room.jpg",
+                    "img/apartment-01.jpg",
+                    "img/apartment-02.jpg",
+                    "img/apartment-01.jpg",
+                  ],
+                },
+                "price": 132,
+                "rate": 3.3,
+                "title": "Canal View Prinsengracht",
+                "type": "house",
+              },
+              Object {
+                "badrooms": 3,
+                "city": "Amsterdam",
+                "coordinates": Array [
+                  52.3909553943508,
+                  4.85309666406198,
+                ],
+                "description": Array [
+                  "A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.",
+                  "An independent House, strategically located between Rembrand Square and National Opera, but where the bustle of the city comes to rest in this alley flowery and colorful.",
+                ],
+                "host": Object {
+                  "image": "img/avatar-angelina.jpg",
+                  "isSuper": false,
+                  "name": "Yosi",
+                },
+                "id": 4,
+                "includes": Array [
+                  "Wifi",
+                  "Heating",
+                  "Kitchen",
+                ],
+                "isFeatured": false,
+                "isPremium": true,
+                "maxGuests": 4,
+                "pictures": Object {
+                  "featured": "img/room.jpg",
+                  "gallery": Array [
+                    "img/apartment-03.jpg",
+                    "img/room.jpg",
+                    "img/apartment-01.jpg",
+                    "img/apartment-02.jpg",
+                    "img/apartment-01.jpg",
+                  ],
+                },
+                "price": 180,
+                "rate": 4.6,
+                "title": "Nice, cozy, warm big bed apartment",
+                "type": "apartment",
+              },
+            ]
+          }
+        />
       </div>
     </div>
   </main>

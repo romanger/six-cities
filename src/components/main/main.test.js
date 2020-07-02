@@ -31,7 +31,8 @@ const places = [
       image: `img/avatar-angelina.jpg`,
       name: `Angelina`,
       isSuper: true,
-    }
+    },
+    coordinates: [52.3909553943508, 4.85309666406198],
   },
   {
     id: 2,
@@ -60,7 +61,8 @@ const places = [
       image: `img/avatar-angelina.jpg`,
       name: `Greta`,
       isSuper: false,
-    }
+    },
+    coordinates: [52.3909553943508, 4.85309666406198],
   },
   {
     id: 3,
@@ -89,7 +91,8 @@ const places = [
       image: `img/avatar-angelina.jpg`,
       name: `Sam`,
       isSuper: true,
-    }
+    },
+    coordinates: [52.3909553943508, 4.85309666406198],
   },
   {
     id: 4,
@@ -118,9 +121,12 @@ const places = [
       image: `img/avatar-angelina.jpg`,
       name: `Yosi`,
       isSuper: false,
-    }
+    },
+    coordinates: [52.3909553943508, 4.85309666406198],
   },
 ];
+
+jest.mock(`../map/map.jsx`, () => `Map`);
 
 it(`Render Main`, () => {
   const tree = renderer.create(
@@ -128,7 +134,11 @@ it(`Render Main`, () => {
         placesCount={50}
         places={places}
         onTitleClick={() => {}}
-      />
+      />, {
+        createNodeMock: () => {
+          return {};
+        }
+      }
   ).toJSON();
 
   expect(tree).toMatchSnapshot();

@@ -30,7 +30,8 @@ const place = {
     image: `img/avatar-angelina.jpg`,
     name: `Angelina`,
     isSuper: true,
-  }
+  },
+  coordinates: [52.3909553943508, 4.85309666406198],
 };
 
 it(`Render offer details`, () => {

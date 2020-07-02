@@ -126,8 +126,8 @@ it(`Render App`, () => {
   const tree = renderer.create(
       <App
         placesCount={50}
-        places = {places}
-        onTitleClick = {()=>{}}
+        places={places}
+        onTitleClick={() => { }}
       />
   ).toJSON();
 

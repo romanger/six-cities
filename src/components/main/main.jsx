@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes, {arrayOf} from 'prop-types';
+import Map from '../map/map.jsx';
+
 import OffersList from '../offers-list/offers-list.jsx';
 
 const Main = (props) => {
@@ -70,7 +72,7 @@ const Main = (props) => {
       </div>
       <div className="cities">
         <div className="cities__places-container container">
-          <section className="cities__places places">
+          <section className="cities__places places" style={{flexShrink: 0}}>
             <h2 className="visually-hidden">Places</h2>
             <b className="places__found">{placesCount} places to stay in Amsterdam</b>
             <form className="places__sorting" action="#" method="get">
@@ -95,13 +97,9 @@ const Main = (props) => {
               <option className="places__option" value="top-rated">Top rated first</option>
             </select> */}
             </form>
-
             <OffersList places={places} onTitleClick={onTitleClick} />
-
           </section >
-          <div className="cities__right-section">
-            <section className="cities__map map"></section>
-          </div>
+          <Map places={places} city={[52.38333, 4.9]} />
         </div >
       </div >
     </main >
@@ -132,6 +130,7 @@ Main.propTypes = {
       name: PropTypes.string,
       isSuper: PropTypes.bool,
     }),
+    coordinates: PropTypes.arrayOf(PropTypes.number),
   })),
   onTitleClick: PropTypes.func.isRequired,
 };
